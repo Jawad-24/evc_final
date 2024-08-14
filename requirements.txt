@@ -1,6 +1,5 @@
 ultralytics
 flask
 firebase_admin
-opencv-header
-firebase_admin
+opencv-python
 pandas
