@@ -19,7 +19,7 @@ app = Flask(__name__)
 os.makedirs('./static/uploads', exist_ok=True)
 
 # Load the YOLO model
-model = YOLO('besst.pt')
+
 class_labels = {
     0: 'جبنة كيري', 1: 'سالمون مدخن', 2: 'بيض', 3: 'حليب', 4: 'زبدة', 
     5: 'سجق', 6: 'افكادو', 7: 'طماطم', 8: 'لبن', 9: 'كيوي', 
