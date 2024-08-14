@@ -1,2 +1,6 @@
 ultralytics
 flask
+firebase_admin
+opencv-header
+firebase_admin
+pandas
