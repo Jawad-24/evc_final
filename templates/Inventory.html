@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بصيرة - Inventory</title>
+  
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center" style="direction: rtl">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{{ url_for('restaurantpage') }}" class="logo d-flex align-items-center">
+        <span class="d-none d-lg-block" style="margin-right: 10px">مؤن</span>
+      </a>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item">
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ url_for('restaurantpage') }}">
+          <i class="bi bi-grid"></i>
+          <span>الصفحة الرئيسية</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('inventory') }}">
+          <i class="bi bi-menu-button-wide"></i><span>المخزون</span>
+        </a>
+      </li><!-- End Inventory Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ url_for('index') }}">
+          <i class="bi bi-bar-chart"></i><span>التنبؤ بالمخزون</span>
+        </a>
+      </li><!-- End Forecasting Nav -->
+    </ul>
+  </aside><!-- End Sidebar -->
+
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1 style="direction: rtl">المخزون</h1>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" style="direction: rtl"> يوجد في ثلاجتك :</h5>
+              <div style="direction: rtl;">{{ table | safe }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer" style="display: none;" >
+    
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f5f2ed;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3c3c3c;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #c8a97e;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+main h2 {
+  font-size: 3rem;
+  color: #c8a97e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.5rem;
+  color: #3c3c3c;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: one for the tabs, one for the fridge */
+  gap: 20px;
+}
+
+.tabs-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.tab {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tab h3 {
+  font-size: 1.25rem;
+  color: #3c3c3c;
+  margin-bottom: 10px;
+}
+
+.tab p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  color: #c8a97e;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab:hover {
+  animation: pulse 0.5s;
+}
+
+.fridge {
+width: 400px;
+height: auto;
+margin: 0 auto;
+padding-top: 50px;
+text-align: center;
+}
+
+.fridge-body {
+background-color: #1abc9c;
+width: 250px;
+height: 400px;
+border-radius: 20px 20px 10px 10px;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+animation: jump 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s infinite alternate;
+}
+
+.handle {
+position: absolute;
+width: 35px;
+height: 15px;
+background-color: #d9d8d9;
+}
+
+.handle.top {
+top: 90px;
+right: 20px;
+}
+
+.handle.bottom {
+top: 150px;
+right: 20px;
+}
+
+.divider {
+width: 250px;
+height: 4px;
+background: #2c3e50;
+position: absolute;
+top: 120px;
+}
+
+.highlight {
+width: 12px;
+background-color: rgba(255,255,255,0.3);
+}
+
+.highlight.top {
+position: absolute;
+top: 12px;
+left: 15px;
+height: 20px;
+border-radius: 15px;
+transform: rotate(45deg);
+}
+
+.highlight.bottom {
+position: absolute;
+top: 50px;
+left: 10px;
+height: 300px;
+border-radius: 15px;
+}
+
+.shadow-bottom {
+position: absolute;
+bottom: 0;
+height: 12px;
+width: 100%;
+background: rgba(0,0,0,0.1);
+border-radius: 0 0 10px 10px;
+}
+
+.fridge-shadow {
+width: 300px;
+height: 35px; 
+background-color: rgba(0,0,0,0.2);
+margin: 20px auto 0 auto;
+border-radius: 50%;
+animation: shrink 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s infinite alternate;
+}
+
+@keyframes jump {
+0% {
+  transform: translate3d(0,0,0);
+}
+100% {
+  transform: translate3d(0, 20px, 0);
+}
+}
+
+@keyframes shrink {
+0% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(0.85);
+}
+}
+
+footer {
+  background-color: #3c3c3c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
