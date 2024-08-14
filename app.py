@@ -8,7 +8,7 @@ from firebase_admin import credentials, db
 import pandas as pd
 import math
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate('final-ce293-firebase-adminsdk-2esv3-30c9ea5b8e.json')  # Replace with the path to your service account key file
+cred = credentials.Certificate('final-ce293-firebase-adminsdk-901zy-3cbc17ef56.json')  # Replace with the path to your service account key file
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://final-ce293-default-rtdb.firebaseio.com/'  # Replace with your Firebase Realtime Database URL
 })
