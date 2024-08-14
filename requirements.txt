@@ -3,3 +3,4 @@ flask
 firebase_admin
 opencv-python
 pandas
+gunicorn
